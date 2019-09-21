@@ -1,6 +1,6 @@
 package com.yingyinqi.website.service.impl;
 
-import com.yingyinqi.website.bean.User;
+import com.yingyinqi.website.bean.entity.User;
 import com.yingyinqi.website.mapper.UserMapper;
 import com.yingyinqi.website.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

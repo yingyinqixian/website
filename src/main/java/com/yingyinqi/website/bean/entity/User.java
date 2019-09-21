@@ -1,4 +1,4 @@
-package com.yingyinqi.website.bean;
+package com.yingyinqi.website.bean.entity;
 
 import lombok.Data;
 import tk.mybatis.mapper.annotation.KeySql;

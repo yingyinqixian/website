@@ -1,6 +1,6 @@
 package com.yingyinqi.website.controller;
 
-import com.yingyinqi.website.bean.TestDto;
+import com.yingyinqi.website.bean.dto.TestDto;
 import com.yingyinqi.website.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

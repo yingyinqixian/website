@@ -14,7 +14,9 @@ public class CommonResult<T> {
         this.message = message;
         this.data = data;
     }
-
+    public static <T> CommonResult<T> success() {
+        return new CommonResult<T>(ResultCode.SUCCESS.getCode(), ResultCode.SUCCESS.getMessage(), null);
+    }
     /**
      * 成功返回结果
      *

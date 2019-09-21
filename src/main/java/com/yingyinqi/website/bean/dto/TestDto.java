@@ -1,4 +1,4 @@
-package com.yingyinqi.website.bean;
+package com.yingyinqi.website.bean.dto;
 
 
 import lombok.Data;

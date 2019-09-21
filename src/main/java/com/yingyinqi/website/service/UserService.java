@@ -1,6 +1,6 @@
 package com.yingyinqi.website.service;
 
-import com.yingyinqi.website.bean.User;
+import com.yingyinqi.website.bean.entity.User;
 
 import java.util.List;
 
