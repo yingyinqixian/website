@@ -15,7 +15,7 @@ public class VideoList extends BaseEntity {
 
     private String videoTitle;
 
-    private String desc;
+    private String description;
 
     private Integer active;
 

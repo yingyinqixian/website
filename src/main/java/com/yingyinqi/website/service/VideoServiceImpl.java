@@ -34,8 +34,27 @@ public class VideoServiceImpl implements  VideoService{
 
     @Override
     public int add(VideoReq req) {
-        String id = UUID.randomUUID().toString();
-        req.setId(id);
+        req.setId(UUID.randomUUID().toString());
+        req.setActive(1);
         return videoMapper.insert(req);
+    }
+
+    @Override
+    public int delete(String id) {
+        return videoMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public boolean update(VideoReq req) {
+        if (req.getActive()==null) {
+            req.setActive(1);
+        }
+        if (req.getCategory()==null) {
+            req.setCategory(1);
+        }
+        if (videoMapper.updateByPrimaryKey(req)>0) {
+            return true;
+        }
+        return false;
     }
 }

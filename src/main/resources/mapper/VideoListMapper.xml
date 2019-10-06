@@ -6,7 +6,7 @@
     <result column="video_url" property="videoUrl" jdbcType="VARCHAR" />
     <result column="img_url" property="imgUrl" jdbcType="VARCHAR" />
     <result column="video_title" property="videoTitle" jdbcType="VARCHAR" />
-    <result column="desc" property="desc" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
     <result column="active" property="active" jdbcType="INTEGER" />
     <result column="create_date" property="createTime" jdbcType="TIMESTAMP" />
     <result column="create_by" property="createBy" jdbcType="VARCHAR" />
@@ -16,6 +16,22 @@
 
     <select id="list" resultType="com.yingyinqi.website.bean.entity.VideoList">
       select * from video_list
+      <where>
+        <if test="id != null and id !=''" >
+          id = #{id}
+        </if>
+        <if test="videoTitle != null and videoTitle != ''" >
+          and video_title = #{videoTitle}
+        </if>
+        <if test="description != null and description!=''" >
+         and description = #{description}
+        </if>
+        <if test="active != null" >
+          and active = #{active}
+        </if>
+        <if test="category != null" >
+          and category = #{category}
+        </if>
+      </where>
     </select>
-
 </mapper>

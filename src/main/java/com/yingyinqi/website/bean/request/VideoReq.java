@@ -4,6 +4,7 @@ import com.yingyinqi.website.bean.entity.BaseEntity;
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
+import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
@@ -16,22 +17,24 @@ import javax.validation.constraints.NotBlank;
 @Data
 @Table(name="video_list")
 public class VideoReq extends BaseEntity {
+    @Id
     private String id;
 
     @NotBlank
     @Length(min=6,message = "长度不能小于6")
-    private String videoUrl;
+    private String videoUrl;// 视频url
 
     @NotBlank
     @Length(min=6,message = "长度不能小于6")
-    private String imgUrl;
+    private String imgUrl;// 封面图片
 
     @NotBlank
-    private String videoTitle;
+    private String videoTitle;// 视频标题
 
-    private String desc;
+    private String description;// 视频描述
 
-    private Integer active;
+    private Integer active;// 是否有效，0无效，1有效
 
-    private Integer category;
+    private Integer category;// 类别，如喜剧，动作
+
 }

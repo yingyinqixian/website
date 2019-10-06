@@ -14,4 +14,8 @@ public interface VideoService {
     PageInfo<VideoList> list(VideoReq req);
 
     int add(VideoReq req);
+
+    int delete(String id);
+
+    boolean update(VideoReq req);
 }
