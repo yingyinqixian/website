@@ -10,7 +10,7 @@ import com.yingyinqi.website.bean.request.VideoReq;
  * @description: com.yingyinqi.website.service
  * @date:2019/9/21
  */
-public interface VideoService {
+public interface VideoService extends Service<VideoReq>{
     PageInfo<VideoList> list(VideoReq req);
 
     int add(VideoReq req);

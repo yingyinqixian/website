@@ -1,10 +1,11 @@
-package com.yingyinqi.website.service;
+package com.yingyinqi.website.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.yingyinqi.website.bean.entity.VideoList;
 import com.yingyinqi.website.bean.request.VideoReq;
 import com.yingyinqi.website.mapper.VideoListMapper;
+import com.yingyinqi.website.service.VideoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,7 +21,7 @@ import java.util.UUID;
  */
 @Slf4j
 @Service
-public class VideoServiceImpl implements  VideoService{
+public class VideoServiceImpl extends AbstractService<VideoReq> implements VideoService {
     @Autowired
     private VideoListMapper videoMapper;
     @Override

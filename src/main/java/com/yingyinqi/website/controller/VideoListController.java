@@ -55,4 +55,10 @@ public class VideoListController {
         }
         return CommonResult.failed();
     }
+
+    @PostMapping(value = "/save")
+    public CommonResult save(@Valid @RequestBody VideoReq req){
+        videoService.save(req);
+        return CommonResult.success();
+    }
 }
